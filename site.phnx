@@ -1,0 +1,316 @@
+<:: hidden
+kind: site;
+phnx: 3;
+name: ~PMC Studios~;
+about: ~PMC Studios. Phoenix Coe makes websites and apps, and designs interfaces, typefaces and road signs.~;
+start: #home;
+icon: "icons/home.svg";
+use: "looks.phnx";
+use: "work.phnx";
+font: ~PMC Header~ "fonts/PMCHeader.woff2";
+font: ~PMC Font~ "fonts/PMCFont.woff2";
+font: ~PMC Font Upright~ "fonts/PMCFontUpright.woff2";
+
+.. the PMC apps on the Apps panel ..
+list %apps < {
+    {name: ~Coe~, about: ~A study helper that explains, checks and quizzes.~, logo: "images/apps/logo-coe.svg", link: ^https://coe.pmcstudios.uk/^},
+    {name: ~Coe Mini~, about: ~Coe in the side of your browser, next to the page you are on.~, logo: "images/apps/logo-mini.svg", link: ^https://coe.pmcstudios.uk/about/^},
+    {name: ~PMC Tools~, about: ~Small tools that each do one job well.~, logo: "images/apps/logo-tools.svg", link: ^https://tools.pmcstudios.uk/^},
+    {name: ~PMC ID~, about: ~One sign-in for all of the above.~, logo: "images/apps/logo-id.svg", link: ^https://id.pmcstudios.uk/^}
+};
+
+.. parts ..
+.. the bar across the top: YouTube and the PMC ID button ..
+&out <:
+    nav $out <:
+        link ~YouTube~ ^https://youtube.com/@PhoenixsLab^ $outlink
+        link ~Sign in with PMC ID~ ^https://id.pmcstudios.uk/^ $account <:
+            image "images/user.svg" ~~ $usericon
+        :>
+    :>
+:>
+
+.. the four blocks. Whichever one goes to the place you are on stands open ..
+&panels <:
+    box $panels <:
+        section $panel $me <:
+            &dots
+            link ~Open the intro~ #home $side <:
+                image "images/pmc-up.svg" ~~ $logoup
+                image "images/pmc.svg" ~~ $logoacross
+            :>
+            box $body <:
+                image "images/pmc.svg" ~PMC~ $logo $in
+                box $in <:
+                    words ~I make websites and apps.~ $big
+                    words ~PMC Studios is where it all lives, from a study helper to a set of everyday tools.~ $tx $intro
+                :>
+            :>
+        :>
+
+        section $panel $ab <:
+            &dots
+            link ~About~ #about $side
+            box $body <:
+                box $cols $in <:
+                    box <:
+                        words ~I design things, then I build them.~ $lead
+                        words ~I’m Phoenix Coe. I make apps and websites, from interfaces and typefaces to road signs, and I build most of what I design because I like seeing it work.~ $tx $colstx $gap18
+                        box $chips <:
+                            link ~YouTube~ ^https://youtube.com/@PhoenixsLab^ $chip $linkchip
+                            link ~itch.io~ ^https://phoenixcoder.itch.io^ $chip $linkchip
+                        :>
+                    :>
+                    box <:
+                        words ~Right now~ $lab
+                        box $tx <:
+                            words ~Building Coe, a study helper, and Coe Mini, the same helper in your browser.~ $now
+                            words ~Making a 3D app where you can hear a song’s parts spread out around you.~ $now
+                        :>
+                        words ~PMC is partnered with $link ^https://riversoftstudios.github.io/river-site/^, partnerlink$River$$, a studio run by a friend of mine.~ $tx $colstx $partner
+                    :>
+                :>
+                subtitle ~About~ $ht $in
+            :>
+        :>
+
+        section $panel $ap <:
+            &dots
+            link ~Apps~ #apps $side
+            box $body <:
+                box $in <:
+                    box $grp <:
+                        words ~PMC apps~ $lab
+                        box $tiles $two <:
+                            @ %a in %apps <:
+                                link %a.name %a.link $tile $apptile <:
+                                    box $applogo <:
+                                        image %a.logo ~~ $fillimg
+                                    :>
+                                    box $tt $apptt <:
+                                        words %a.name $tilename $appname
+                                        words %a.about $tx $tilesay $appsay
+                                    :>
+                                :>
+                            :>
+                        :>
+                    :>
+                    box $grp $grp2 <:
+                        words ~Also made~ $lab
+                        box $plates <:
+                            box $plate <:
+                                box $pic <:
+                                    image "images/mini-mayhem.png" ~A golf ball with an arrow showing where it will go, on a green course~ $fillimg
+                                :>
+                                box <:
+                                    subtitle ~Mini Mayhem~ $platename
+                                    words ~A top-down mini golf app. Every course has 18 holes, and they get harder as you go.~ $tx $platesay
+                                    link ~Open Mini Mayhem~ ^https://phoenixcoder.itch.io^ $cta
+                                :>
+                            :>
+                        :>
+                    :>
+                :>
+                subtitle ~Apps~ $ht $in
+            :>
+        :>
+
+        section $panel $pj <:
+            &dots
+            link ~Projects~ #projects $side
+            box $body <:
+                box $in <:
+                    box $grp <:
+                        words ~School websites~ $lab
+                        box $tiles $three <:
+                            @ %w in %works <:
+                                link %w.name #work %w $tile <:
+                                    box $th <:
+                                        image %w.pic ~~ $fillimg $thumb
+                                    :>
+                                    box $tt <:
+                                        words %w.name $tilename
+                                        words %w.card $tx $tilesay
+                                    :>
+                                :>
+                            :>
+                        :>
+                        words ~Three websites I made for Ipswich Academy, which are in the process of being adopted.~ $tx $note
+                    :>
+                :>
+                subtitle ~Projects~ $ht $in $tallonly
+            :>
+        :>
+    :>
+    &out
+:>
+
+.. comic-book halftone in the top right corner of the open block ..
+&dots <:
+    box $dots <:
+        box $dotset <:
+            box $dot1
+            box $dot2
+            box $dot3
+        :>
+    :>
+:>
+::>
+
+<:: shown
+#home $site <:
+    &panels
+:>
+
+#about $site <:
+    icon: "icons/about.svg";
+    &panels
+:>
+
+#apps $site <:
+    icon: "icons/apps.svg";
+    &panels
+:>
+
+#projects $site <:
+    icon: "icons/projects.svg";
+    &panels
+:>
+
+.. one page for each school website ..
+#work %w in %works $case <:
+    name: ~%w.name - PMC Studios~;
+    about: ~%w.about~;
+    icon: "icons/green.svg";
+    header $bar <:
+        link ~PMC Studios, home~ #home $mark <:
+            image "images/pmc.svg" ~~ $marklogo
+        :>
+        box $barright <:
+            link ~All projects~ #projects $back $d
+            link ~Sign in with PMC ID~ ^https://id.pmcstudios.uk/^ $account <:
+                image "images/user.svg" ~~ $usericon
+            :>
+        :>
+    :>
+    section $hero $%w.look <:
+        words %w.kicker $tx $kicker
+        title %w.name $herotitle $d
+        words %w.sum $tx $sum
+        box $herorow <:
+            link ~Visit the live site~ %w.live $visit $herovisit $d
+            box $meta $tx <:
+                box <:
+                    words ~Role~ $dt $d
+                    words %w.role $dd
+                :>
+                box <:
+                    words ~Built with~ $dt $d
+                    words %w.built $dd
+                :>
+                box <:
+                    words ~For~ $dt $d
+                    words %w.for $dd
+                :>
+            :>
+        :>
+    :>
+    &shot %w.shot
+    section $story $storyend <:
+        subtitle %w.why $storyhead $d $rv
+        words %w.whysay $tx $storysay $rv
+    :>
+    box $plates2 <:
+        @ %p in %w.plates <:
+            box $plate2 $rv <:
+                subtitle ~%p.name$#337957, bold$%p.mark$$~ $platehead $d
+                words %p.say $tx $platetext
+            :>
+        :>
+    :>
+    | %w.notes.size over 0 <:
+        box $notes $tx <:
+            box $fnline <:
+                @ %n in %w.notes <:
+                    words ~$#337957, bold$%n.mark$$ %n.say~ $fn
+                :>
+            :>
+        :>
+    :>
+    box $duo <:
+        @ %s in %w.duo <:
+            &shot %s
+        :>
+    :>
+    @ %s in %w.more <:
+        &shot %s
+    :>
+    section $story <:
+        subtitle ~Some choices I made.~ $storyhead $d $rv
+        box <:
+            @ %c in %w.choices <:
+                box $decision $rv <:
+                    subtitle %c.name $platehead $d
+                    words %c.say $tx $platetext
+                :>
+            :>
+        :>
+    :>
+    section $phonesection <:
+        box <:
+            subtitle ~Works on a phone too.~ $storyhead $d $rv
+            words %w.phonesay $tx $pstext $rv
+            link ~Visit the live site~ %w.live $visit $d $rv
+        :>
+        box $device $rv <:
+            box $deviceframe *tap <: %big < %w.phone;; %bigsay < %w.phonealt; :> <:
+                box $notch
+                image %w.phone %w.phonealt $shotimg
+            :>
+        :>
+    :>
+    link ~Next project~ #work %w.next $next $d $%w.nextlook <:
+        words ~Next project~ $tx $nextsay
+        words %w.next $nextname
+    :>
+    footer $foot $d <:
+        link ~PMC Studios~ #home $footlink
+        link ~YouTube~ ^https://youtube.com/@PhoenixsLab^ $footlink
+    :>
+    | %big <:
+        box $lb *tap <: %big < ~~; :> <:
+            button ~Close~ $lbx $d
+            image %big %bigsay $lbimg
+        :>
+    :>
+:>
+
+#missing $lost <:
+    name: ~Not Found - PMC Studios~;
+    box $stage <:
+        box $top <:
+            link ~PMC Studios, home~ #home <:
+                image "images/pmc.svg" ~~ $toplogo
+            :>
+            box $topright <:
+                words ~Error~ $toperror
+                link ~Sign in with PMC ID~ ^https://id.pmcstudios.uk/^ $lostaccount <:
+                    image "images/user.svg" ~~ $usericon
+                :>
+            :>
+        :>
+        box $digits <:
+            words ~4~ $digit
+            words ~0~ $digit
+            words ~4~ $digit
+        :>
+        box $bot <:
+            box <:
+                words ~That page isn’t here.~ $msg
+                words ~The link might be old, or it might have been typed wrong. The rest of the site is still standing.~ $tx $msgsay
+            :>
+            link ~Back to PMC~ #home $btn
+        :>
+    :>
+:>
+::>

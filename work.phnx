@@ -1,0 +1,116 @@
+<:: hidden
+kind: kit;
+
+.. the three school websites. Each card makes one page at /work/<name>/ ..
+list %works < {
+    {
+        name: ~Student Hub~, card: ~My redesign of the school’s student hub.~, look: ~green~, pic: "images/work/student-hub-1.jpg",
+        about: ~My redesign of the Ipswich Academy student hub: one page for the things students open every day.~,
+        kicker: ~A redesign for Ipswich Academy~, sum: ~My redesign of the school’s student hub.~, live: ^https://projects.pmcstudios.uk/studentpage/^,
+        role: ~Redesign and development~, built: ~HTML, CSS and JavaScript~, for: ~Ipswich Academy students~,
+        shot: {pic: "images/work/student-hub-1.jpg", alt: ~The hub on a desktop: quick links up top, news and notices below.~, say: ~The hub on a desktop: quick links up top, news and notices below.~},
+        why: ~The school already had a student hub. I wanted it to be nicer to use.~,
+        whysay: ~Students open a lot of different things in a school day: the portal, Google Classroom, email, Sparx, the revision site. I redesigned the hub around those things, so they’re all one tap away on a single page, with room for what you check most: what’s going on in school and where a room is.~,
+        plates: {
+            {name: ~Twelve quick links~, mark: ~~, say: ~Everything students open most, as big buttons with proper icons.~},
+            {name: ~News and notices~, mark: ~~, say: ~Announcements and posters sit right under the links, so you see them without having to hunt.~},
+            {name: ~Which week it is~, mark: ~~, say: ~A little badge shows the school week. It knows when the holidays are, so it doesn’t get confused.~},
+            {name: ~A school map~, mark: ~~, say: ~Both floors, colour-coded, in a pop-up. Handy if you’re new and can’t find a room.~}
+        },
+        notes: {},
+        duo: {
+            {pic: "images/work/student-hub-2.jpg", alt: ~Quick links, other useful links and the news cards.~, say: ~Quick links, other useful links and the news cards.~},
+            {pic: "images/work/student-hub-3.jpg", alt: ~The map opens as a pop-up, so you never leave the page.~, say: ~The map opens as a pop-up, so you never leave the page.~}
+        },
+        more: {},
+        choices: {
+            {name: ~Dressed in the school’s colours.~, say: ~The purple and orange come straight from the IA logo, so it still feels like part of the school.~},
+            {name: ~Made with phones in mind.~, say: ~Students may need to access links outside of school, so on a small screen every link turns into a big, full-width row that’s easy to tap.~},
+            {name: ~No sign-in, no frameworks.~, say: ~It’s one page that loads fast, and it’s easy for someone else to pick up and look after.~}
+        },
+        phonesay: ~On a small screen the quick links stack into big rows, and the news cards follow underneath.~, phone: "images/work/student-hub-phone.jpg", phonealt: ~The hub on a phone, scrolled down to the news.~,
+        next: ~Revision Hub~, nextlook: ~black~
+    },
+    {
+        name: ~Revision Hub~, card: ~A full overhaul of the school’s revision site.~, look: ~black~, pic: "images/work/revision-hub-1.jpg",
+        about: ~My overhaul of the Ipswich Academy revision site: less clutter, and set up around each student’s own subjects.~,
+        kicker: ~A rebuild for Ipswich Academy~, sum: ~A full overhaul of the school’s revision site.~, live: ^https://projects.pmcstudios.uk/revisionhub/login.html^,
+        role: ~Redesign and development~, built: ~HTML, CSS and JavaScript, plus a small Python server for accounts~, for: ~Students, and the teachers who run each subject~,
+        shot: {pic: "images/work/revision-hub-1.jpg", alt: ~The dashboard: your subjects, a checklist of your own and key dates.~, say: ~The dashboard: your subjects, a checklist of your own and key dates.~},
+        why: ~The old revision site was cluttered, and there was nowhere to save anything.~,
+        whysay: ~It had no accounts, and it showed you everything, whether it was yours or not. Design differed between each department. I rebuilt it from scratch so it’s calmer to look at and set up around your own subjects.~,
+        plates: {
+            {name: ~Set up around you~, mark: ~~, say: ~The first time you visit, you pick your four options and your science course. Maths, English and Science are added for you, and it remembers.~},
+            {name: ~A dashboard~, mark: ~~, say: ~Your subjects, a checklist of your own, and the important stuff like the mock timetable and intervention sessions.~},
+            {name: ~A page for every subject~, mark: ~~, say: ~Revision resources, exam papers and advice in tabs, with a handy sidebar and a note on who to ask for help. English even has flashcards.~},
+            {name: ~Search and pinning~, mark: ~~, say: ~Search across everything, and pin the subjects you use the most.~},
+            {name: ~Accounts~, mark: ~*~, say: ~Sign in with your school account and everything lives in one place. Without one, it saves to your browser.~},
+            {name: ~Teachers can edit their pages~, mark: ~**~, say: ~Each department gets an editor, so teachers can keep their own page up to date without asking me.~}
+        },
+        notes: {
+            {mark: ~*~, say: ~Accounts aren’t live on the site yet. For now, your choices are saved in your browser.~},
+            {mark: ~**~, say: ~The editor is built, but teachers can’t use it yet.~}
+        },
+        duo: {
+            {pic: "images/work/revision-hub-2.jpg", alt: ~A subject page: resources, exam papers and advice, with a sidebar.~, say: ~A subject page with resources, exam papers and advice, with a sidebar.~},
+            {pic: "images/work/revision-hub-3.jpg", alt: ~English also has flashcards, grouped by text.~, say: ~English also has flashcards, grouped by text.~}
+        },
+        more: {},
+        choices: {
+            {name: ~All the rules in one place.~, say: ~Which subjects you have to take, which science courses go together, how many options you pick: it’s written down once, and both the site and the account server read it.~},
+            {name: ~Calmer to look at.~, say: ~Cards, clear headings and one purple, so a page full of links doesn’t feel like a wall.~},
+            {name: ~For everyone.~, say: ~There’s a skip-to-content link, proper headings, and everything works with a keyboard.~}
+        },
+        phonesay: ~Everything stacks into one column, and the tabs slide sideways so nothing gets squashed.~, phone: "images/work/revision-hub-phone.jpg", phonealt: ~The dashboard on a phone.~,
+        next: ~Alumni~, nextlook: ~gold~
+    },
+    {
+        name: ~Alumni~, card: ~A brand new site for keeping former students in touch.~, look: ~gold~, pic: "images/work/alumni-1.jpg",
+        about: ~A new alumni website for Ipswich Academy, built from scratch.~,
+        kicker: ~A new site for Ipswich Academy~, sum: ~A website for keeping former students in touch.~, live: ^https://projects.pmcstudios.uk/alumni/^,
+        role: ~Design and development~, built: ~HTML, CSS and JavaScript, no frameworks~, for: ~Former students of Ipswich Academy~,
+        shot: {pic: "images/work/alumni-1.jpg", alt: ~The first screen: a big wordmark, a way to get in touch and a contact form.~, say: ~The first screen: a big wordmark, a way to get in touch and a contact form.~},
+        why: ~Schools lose touch with the people who leave.~,
+        whysay: ~I wanted to give former students a reason to come back: somewhere to say where they ended up, hear about events, and find ways to help the students coming up behind them.~,
+        plates: {
+            {name: ~Five things to do~, mark: ~~, say: ~Update your details, come to an event, help current students, share your story, or give. Each one is a card with a button, so nobody has to hunt.~},
+            {name: ~Where they went next~, mark: ~~, say: ~Stories from former students about what they did after school, to show current students what’s possible.~},
+            {name: ~What’s coming up~, mark: ~~, say: ~Events with a button to register your interest, like a careers evening, a ten-year reunion and a mock interview day.~},
+            {name: ~Ways to help~, mark: ~~, say: ~Mentor a Year 10 or 11 student, speak at a careers evening, or offer work experience.~}
+        },
+        notes: {},
+        duo: {
+            {pic: "images/work/alumni-2.jpg", alt: ~Five things to do up front, then stories of where people went next.~, say: ~Five things to do up front, then stories of where people went next.~},
+            {pic: "images/work/alumni-3.jpg", alt: ~Stories, then upcoming events with a register-interest button.~, say: ~Stories, then upcoming events with a register-interest button.~}
+        },
+        more: {
+            {pic: "images/work/alumni-4.jpg", alt: ~Upcoming events and the latest news.~, say: ~Upcoming events and the latest news.~}
+        },
+        choices: {
+            {name: ~A bold first impression.~, say: ~A huge sideways wordmark and a splash of orange on deep purple. It looks like the school, but it feels like somewhere you’d want to belong.~},
+            {name: ~Always something to click.~, say: ~A small “next event” pill stays in the menu, so there’s always a reason to take a look.~},
+            {name: ~One page, no frameworks.~, say: ~Four files, about 140KB in total. Quick on any connection and simple to hand over.~}
+        },
+        phonesay: ~The big wordmark turns on its side and the menu folds into one button, so it still feels bold on a small screen.~, phone: "images/work/alumni-phone.jpg", phonealt: ~The first screen on a phone.~,
+        next: ~Student Hub~, nextlook: ~green~
+    }
+};
+
+.. the big picture you can click on ..
+text %big < ~~;
+text %bigsay < ~~;
+
+*key ~Escape~ <:
+    %big < ~~;
+:>
+
+.. a screenshot with its caption ..
+&shot %s <:
+    box $shot $rv <:
+        box $frame *tap <: %big < %s.pic;; %bigsay < %s.alt; :> <:
+            image %s.pic %s.alt $shotimg
+        :>
+        words %s.say $tx $caption
+    :>
+:>
+::>
