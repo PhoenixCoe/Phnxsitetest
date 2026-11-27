@@ -59,7 +59,16 @@ $me <:
     colour: %fg;
     $dots <: colour: green; :>
     $dotset <: see-through: 58%; :>
-    $side <: text: across; :>
+    $side <:
+        text: across;
+        layout: stack;
+        y: end;
+        | phone <:
+            layout: row;
+            x: start;
+            y: centre;
+        :>
+    :>
 :>
 $ab <:
     %fg: %cream;
@@ -120,7 +129,7 @@ $dot3 <:
 
 .. closed: the name (or the logo) stands up the side ..
 $side <:
-    over: left 0, bottom 0;
+    over: fill;
     text: up;
     pad: 18 to 32 at 2 wide;
     size: 54.4 to 128 at 7.6 wide;
@@ -130,8 +139,6 @@ $side <:
     ease: 0.3;
     | phone <:
         text: across;
-        over: top 0, left 0;
-        height: fill;
         layout: row;
         y: centre;
         pad: 0, 18;
