@@ -813,10 +813,7 @@ $rv <:
         see-through: 0;
         move: 0, 0;
     :>
-    | still <:
-        see-through: 0;
-        move: 0, 0;
-    :>
+    | still <: move: 0, 0; :>
 :>
 
 .. the big picture ..
